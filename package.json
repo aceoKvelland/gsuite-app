@@ -1,10 +1,16 @@
 {
-  "name": "google-suit",
+  "name": "akeo-gsuit",
+  "productName": "Akeo-GSuit",
   "version": "1.0.0",
-  "description": "test electron",
+  "description": "Akeo G-Suit",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/akeo.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . akeo-gsuit --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/akeo.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Akeo-GSuit\"",
+    "package-linux": "electron-packager . akeo-gsuit --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=true --out=release-builds",
+    "create-installer-win": "node installers/windows/createinstaller.js",
+    "create-installer-mac": "electron-installer-dmg ./release-builds/Akeo-GSuit-darwin-x64/Akeo-GSuit.app akeo-gsuit --out=release-builds --overwrite --icon=assets/icons/mac/akeo.icns"
   },
   "author": "",
   "license": "ISC",
@@ -12,5 +18,11 @@
     "bootstrap": "^4.2.1",
     "jquery": "^3.3.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "electron": "^4.0.2",
+    "electron-installer-dmg": "^2.0.0",
+    "electron-packager": "^13.0.1",
+    "electron-winstaller": "^2.7.0",
+    "electron-wix-msi": "^2.1.1"
+  }
 }
