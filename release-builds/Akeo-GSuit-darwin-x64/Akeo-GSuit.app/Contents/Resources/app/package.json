@@ -9,12 +9,14 @@
     "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/akeo.icns --prune=true --out=release-builds",
     "package-win": "electron-packager . akeo-gsuit --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/akeo.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Akeo-GSuit\"",
     "package-linux": "electron-packager . akeo-gsuit --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=true --out=release-builds",
-    "create-installer-win": "node installers/windows/createinstaller.js"
+    "create-installer-win": "node installers/windows/createinstaller.js",
+    "create-installer-mac": "electron-installer-dmg ./release-builds/Akeo-GSuit-darwin-x64/Akeo-GSuit.app akeo-gsuit --out=release-builds --overwrite --icon=assets/icons/mac/akeo.icns"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^4.2.1",
+    "electron-squirrel-startup": "^1.0.0",
     "jquery": "^3.3.1"
   },
   "devDependencies": {

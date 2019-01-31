@@ -58,11 +58,18 @@
                 <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
                     aria-controls="nav-profile" aria-selected="false"><img src="https://www.gstatic.com/companion/icon_assets/calendar_2x.png"
                         width="30px"></a>
-               
+
+                <a class="nav-item nav-link" id="nav-hangout-tab" data-toggle="tab" href="#nav-hangout" role="tab"
+                    aria-controls="nav-hangout" aria-selected="false">
+                    <img src="http://ssl.gstatic.com/images/icons/material/product/2x/hangouts_32dp.png" width="30px"></a>
+
+                <a class="nav-item nav-link" id="nav-vsts-tab" data-toggle="tab" href="#nav-vsts" role="tab"
+                    aria-controls="nav-vsts" aria-selected="false">
+                    <img src="assets/vsts.png" width="30px"></a>
+
                 <a class="nav-item nav-link" id="nav-slack-tab" data-toggle="tab" href="#nav-slack" role="tab"
                     aria-controls="nav-slack" aria-selected="false">
-                    <img src="assets/slack.png"
-                    width="30px"></a>
+                    <img src="assets/slack.png" width="30px"></a>
             </div>
         </nav>
 
@@ -73,7 +80,13 @@
             <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                 <webview src="https://calendar.google.com/calendar" allowpopups autosize style="height:100vh"></webview>
             </div>
-            <div class="tab-pane fade" id="nav-slack" role="tabpanel" aria-labelledby="nav-drive-tab">
+            <div class="tab-pane fade" id="nav-hangout" role="tabpanel" aria-labelledby="nav-hangout-tab">
+                <webview src="https://hangouts.google.com" allowpopups autosize style="height:100vh"></webview>
+            </div>
+            <div class="tab-pane fade" id="nav-vsts" role="tabpanel" aria-labelledby="nav-vsts-tab">
+                <webview src="https://akeoas.visualstudio.com" allowpopups autosize style="height:100vh"></webview>
+            </div>
+            <div class="tab-pane fade" id="nav-slack" role="tabpanel" aria-labelledby="nav-slack-tab">
                 <webview src="https://akeoas.slack.com/messages" allowpopups autosize style="height:100vh"></webview>
             </div>
         </div>
